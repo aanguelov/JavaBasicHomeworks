@@ -29,6 +29,9 @@ public class _9_ListOfProducts {
                 writer.println();
             }
 
+            fileReader.close();
+            writer.close();
+
         } catch (IOException e) {
             System.out.println("Error");
         }
@@ -40,7 +43,7 @@ class Product implements Comparable<Product>{
 
     String name;
     BigDecimal price;
-    
+
     public Product(String name, BigDecimal price) {
         this.name = name;
         this.price = price;
