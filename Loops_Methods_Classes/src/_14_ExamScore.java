@@ -32,12 +32,18 @@ public class _14_ExamScore {
                 grades.add(values.get(s));
             }
             System.out.print(names + "; ");
-            double sum = 0;
-            for (Double grade : grades) {
-                sum += grade;
-            }
-            System.out.printf("avg=%.2f", sum/grades.size());
+            double averageGrades = calcGradesAverage(grades);
+            System.out.printf("avg=%.2f", averageGrades);
             System.out.println();
         }
+    }
+
+    private static double calcGradesAverage(ArrayList<Double> grades) {
+        double sum = 0;
+        for (Double grade : grades) {
+            sum += grade;
+        }
+        double average = sum/grades.size();
+        return average;
     }
 }
